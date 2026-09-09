@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Nawzad Estate | نەوزاد ئیستەیت | عقارات نوزاد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
+<style>
+:root {
+  --bg:#0F1923; --bg2:#162130; --bg3:#1E2D3E; --surface:#243447; --border:#2E4560;
+  --gold:#C9923B; --gold-l:#E5B96A; --ivory:#F7F3ED; --dim:#BDB5AA;
+  --grey:#8BA4B8; --green:#4CAF7D; --red:#E05B5B;
+  --fd:'Playfair Display',serif; --fb:'Inter','Noto Naskh Arabic',sans-serif;
+  --r:12px; --rl:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ivory);font-family:var(--fb);overflow-x:hidden}
+[dir=rtl]{font-family:'Noto Naskh Arabic',sans-serif}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+/* ─── NAVBAR ─── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:300;height:68px;padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(15,25,35,.93);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(201,146,59,.15);transition:height .3s}
+.navbar.sc{height:56px}
+.nlogo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.nlogo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--gold),var(--gold-l));
+  border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.nlogo span{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--ivory)}
+.nlogo span b{color:var(--gold)}
+.nlinks{display:flex;align-items:center;gap:6px;list-style:none}
+.nlinks a{color:var(--grey);text-decoration:none;font-size:.88rem;font-weight:500;padding:7px 13px;border-radius:var(--r);transition:all .2s}
+.nlinks a:hover,.nlinks a.active{color:var(--ivory);background:rgba(201,146,59,.1)}
+.nright{display:flex;align-items:center;gap:10px}
+.lsw{display:flex;gap:3px;background:var(--surface);border-radius:8px;padding:4px}
+.lb{padding:3px 10px;border:none;cursor:pointer;border-radius:6px;font-size:.72rem;font-weight:700;
+  color:var(--grey);background:transparent;transition:all .2s;font-family:inherit}
+.lb.on{background:var(--gold);color:var(--bg)}
+.btn-post{padding:8px 18px;background:var(--gold);color:var(--bg);border:none;cursor:pointer;
+  border-radius:var(--r);font-size:.83rem;font-weight:700;font-family:inherit;transition:all .2s}
+.btn-post:hover{background:var(--gold-l);transform:translateY(-1px)}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hbg span{display:block;width:22px;height:2px;background:var(--ivory);border-radius:2px}
+
+/* ─── HERO ─── */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  position:relative;padding:80px 5% 60px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(201,146,59,.07) 0%,transparent 70%),
+  radial-gradient(ellipse 40% 40% at 80% 20%,rgba(139,164,184,.05) 0%,transparent 60%)}
+.hero-grid{position:absolute;inset:0;opacity:.025;
+  background-image:linear-gradient(rgba(201,146,59,1) 1px,transparent 1px),linear-gradient(90deg,rgba(201,146,59,1) 1px,transparent 1px);
+  background-size:60px 60px}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:780px}
+.hero-ey{display:inline-flex;align-items:center;gap:7px;background:rgba(201,146,59,.1);
+  border:1px solid rgba(201,146,59,.3);color:var(--gold);font-size:.77rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:5px 15px;border-radius:100px;margin-bottom:26px}
+.hero-ey::before{content:"◆";font-size:.45rem}
+.hero h1{font-family:var(--fd);font-size:clamp(2.3rem,5.5vw,4rem);font-weight:700;line-height:1.15;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:clamp(.9rem,1.8vw,1.05rem);color:var(--grey);max-width:500px;margin:0 auto 38px;line-height:1.7}
+.sbar{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
+  padding:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;max-width:680px;margin:0 auto 44px;
+  box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.sbar select,.sbar input{flex:1;min-width:130px;background:var(--surface);border:1px solid var(--border);
+  color:var(--ivory);padding:9px 13px;border-radius:var(--r);font-size:.85rem;font-family:inherit;cursor:pointer;appearance:none}
+.sbar input{min-width:160px}
+.sbar input::placeholder{color:var(--grey)}
+.sbar select:focus,.sbar input:focus{outline:none;border-color:var(--gold)}
+.sbar-btn{background:var(--gold);color:var(--bg);border:none;cursor:pointer;padding:9px 22px;
+  border-radius:var(--r);font-weight:700;font-size:.88rem;font-family:inherit;transition:all .2s;white-space:nowrap}
+.sbar-btn:hover{background:var(--gold-l)}
+.hstats{display:flex;gap:36px;justify-content:center;flex-wrap:wrap}
+.hstat strong{display:block;font-family:var(--fd);font-size:1.75rem;color:var(--gold)}
+.hstat span{font-size:.78rem;color:var(--grey)}
+.scroll-dn{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--grey);font-size:.72rem;
+  animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* ─── SECTIONS ─── */
+section{padding:76px 5%}
+.sec-hd{text-align:center;margin-bottom:44px}
+.sec-ey{color:var(--gold);font-size:.73rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.sec-ti{font-family:var(--fd);font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:700;color:var(--ivory);line-height:1.2}
+.sec-su{color:var(--grey);font-size:.9rem;margin-top:9px}
+
+/* ─── FILTERS ─── */
+.fbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:34px}
+.fb{padding:7px 18px;border-radius:100px;border:1px solid var(--border);background:transparent;
+  color:var(--grey);font-size:.83rem;font-weight:500;cursor:pointer;font-family:inherit;transition:all .2s}
+.fb:hover{border-color:var(--gold);color:var(--gold)}
+.fb.on{background:var(--gold);border-color:var(--gold);color:var(--bg);font-weight:700}
+
+/* ─── PROPERTY CARDS ─── */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
+.pcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
+  overflow:hidden;transition:all .3s;cursor:pointer;position:relative}
+.pcard:hover{transform:translateY(-6px);border-color:rgba(201,146,59,.45);box-shadow:0 8px 32px rgba(201,146,59,.2)}
+.card-img{position:relative;height:215px;overflow:hidden;background:var(--surface)}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .card-img img{transform:scale(1.07)}
+.cbadge{position:absolute;top:13px;left:13px;padding:4px 11px;border-radius:100px;
+  font-size:.7rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.bs{background:var(--gold);color:var(--bg)}.br{background:var(--green);color:#fff}
+.cnew{position:absolute;top:13px;right:13px;background:rgba(201,146,59,.9);color:var(--bg);
+  padding:3px 9px;border-radius:100px;font-size:.67rem;font-weight:800;text-transform:uppercase}
+/* 360 hover overlay */
+.c360-ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0);transition:background .3s}
+.pcard:hover .c360-ov{background:rgba(0,0,0,.38)}
+.c360-btn{opacity:0;transform:scale(.8);transition:all .3s;
+  background:rgba(201,146,59,.94);color:var(--bg);border:none;cursor:pointer;padding:10px 20px;
+  border-radius:100px;font-size:.83rem;font-weight:800;display:flex;align-items:center;gap:5px;
+  font-family:inherit;box-shadow:0 4px 20px rgba(201,146,59,.5)}
+.pcard:hover .c360-btn{opacity:1;transform:scale(1)}
+.cbody{padding:19px}
+.ctype{font-size:.7rem;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.ctitle{font-family:var(--fd);font-size:1.08rem;font-weight:600;color:var(--ivory);margin-bottom:5px;line-height:1.3}
+.cloc{font-size:.8rem;color:var(--grey);display:flex;align-items:center;gap:3px;margin-bottom:14px}
+.cspecs{display:flex;gap:14px;border-top:1px solid var(--border);padding-top:13px;margin-bottom:13px}
+.spec{display:flex;align-items:center;gap:4px;font-size:.78rem;color:var(--grey)}
+.cfoot{display:flex;align-items:center;justify-content:space-between}
+.cprice{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--gold)}
+.cprice small{font-size:.68rem;color:var(--grey);font-family:var(--fb)}
+.btn-det{background:var(--surface);border:1px solid var(--border);color:var(--ivory);
+  padding:6px 14px;border-radius:var(--r);font-size:.78rem;font-weight:500;cursor:pointer;
+  font-family:inherit;transition:all .2s}
+.btn-det:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ─── FEATURES ─── */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.fcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
+  padding:26px 22px;transition:all .3s}
+.fcard:hover{border-color:rgba(201,146,59,.3);transform:translateY(-4px)}
+.ficon{width:50px;height:50px;background:rgba(201,146,59,.1);border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:14px}
+.ftitle{font-family:var(--fd);font-size:1rem;font-weight:600;color:var(--ivory);margin-bottom:7px}
+.fdesc{font-size:.83rem;color:var(--grey);line-height:1.6}
+
+/* ─── CTA ─── */
+.cta-sec{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  text-align:center;padding:76px 5%;position:relative;overflow:hidden}
+.cta-sec::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,146,59,.07) 0%,transparent 70%)}
+.cta-sec>*{position:relative;z-index:1}
+.cta-sec h2{font-family:var(--fd);font-size:clamp(1.75rem,3.5vw,2.6rem);color:var(--ivory);margin-bottom:10px}
+.cta-sec p{color:var(--grey);margin-bottom:28px;max-width:480px;margin-inline:auto}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-cg{background:var(--gold);color:var(--bg);border:none;cursor:pointer;padding:13px 28px;
+  border-radius:var(--r);font-size:.92rem;font-weight:700;font-family:inherit;transition:all .2s}
+.btn-cg:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 4px 24px rgba(201,146,59,.25)}
+.btn-co{background:transparent;color:var(--ivory);border:1px solid var(--border);cursor:pointer;
+  padding:13px 28px;border-radius:var(--r);font-size:.92rem;font-weight:500;font-family:inherit;transition:all .2s}
+.btn-co:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ─── FOOTER ─── */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 5% 28px;position:relative}
+.fgrd{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.fbrand p{font-size:.83rem;color:var(--grey);margin-top:10px;line-height:1.7;max-width:270px}
+.fcol h5{font-size:.82rem;font-weight:700;color:var(--ivory);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.fcol ul{list-style:none}
+.fcol ul li{margin-bottom:7px}
+.fcol ul li a{color:var(--grey);text-decoration:none;font-size:.83rem;transition:color .2s}
+.fcol ul li a:hover{color:var(--gold)}
+.fbot{border-top:1px solid var(--border);padding-top:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fbot p{font-size:.78rem;color:var(--grey)}
+
+/* ─── PROPERTY DETAIL MODAL ─── */
+.moverlay{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.88);
+  backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;
+  padding:16px;opacity:0;pointer-events:none;transition:opacity .3s}
+.moverlay.open{opacity:1;pointer-events:all}
+.mbox{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
+  width:100%;max-width:980px;max-height:92vh;display:flex;flex-direction:column;
+  transform:scale(.95);transition:transform .3s;overflow:hidden}
+.moverlay.open .mbox{transform:scale(1)}
+.mhead{display:flex;align-items:center;justify-content:space-between;
+  padding:18px 22px;border-bottom:1px solid var(--border);flex-shrink:0}
+.mhead h3{font-family:var(--fd);font-size:1.15rem;color:var(--ivory)}
+.mcls{background:var(--surface);border:1px solid var(--border);color:var(--ivory);
+  width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1rem;transition:all .2s;border:none}
+.mcls:hover{background:var(--red)}
+/* tabs */
+.mtabs{display:flex;gap:3px;padding:14px 22px 0;border-bottom:1px solid var(--border);flex-shrink:0}
+.mtab{padding:8px 16px;border-radius:var(--r) var(--r) 0 0;border:1px solid transparent;border-bottom:none;
+  color:var(--grey);font-size:.83rem;font-weight:500;cursor:pointer;font-family:inherit;transition:all .2s;background:transparent}
+.mtab.on{background:var(--surface);border-color:var(--border);color:var(--gold)}
+.mbody{flex:1;overflow-y:auto}
+/* details tab */
+.mprop{padding:22px}
+.mgal{display:grid;grid-template-columns:2fr 1fr;gap:7px;border-radius:var(--r);overflow:hidden;height:260px;margin-bottom:22px}
+.gmain{height:100%;background:var(--surface);overflow:hidden;cursor:zoom-in;position:relative}
+.gmain img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gmain:hover img{transform:scale(1.03)}
+.gside{display:flex;flex-direction:column;gap:7px}
+.gthumb{flex:1;background:var(--surface);overflow:hidden;cursor:zoom-in;position:relative}
+.gthumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gthumb:hover img{transform:scale(1.05)}
+/* zoom hint icon */
+.gmain::after,.gthumb::after{
+  content:'🔍';position:absolute;bottom:6px;right:8px;
+  font-size:.85rem;opacity:0;transition:opacity .2s;
+  background:rgba(0,0,0,.5);padding:2px 5px;border-radius:4px;pointer-events:none;
+}
+.gmain:hover::after,.gthumb:hover::after{opacity:1}
+
+/* ── LIGHTBOX ── */
+.lightbox{
+  position:fixed;inset:0;z-index:3000;
+  background:rgba(0,0,0,.96);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .25s;
+  padding:0;
+}
+.lightbox.open{opacity:1;pointer-events:all}
+.lb-img-wrap{
+  position:relative;
+  max-width:96vw;max-height:92vh;
+  display:flex;align-items:center;justify-content:center;
+}
+.lb-img-wrap img{
+  max-width:96vw;max-height:86vh;
+  object-fit:contain;border-radius:var(--r);
+  transform:scale(.92);transition:transform .3s;
+  display:block;
+}
+.lightbox.open .lb-img-wrap img{transform:scale(1)}
+/* close */
+.lb-close{
+  position:fixed;top:16px;right:16px;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  color:#fff;font-size:1.3rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;z-index:10;
+}
+.lb-close:hover{background:var(--red)}
+/* arrows */
+.lb-arrow{
+  position:fixed;top:50%;transform:translateY(-50%);
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  color:#fff;font-size:1.4rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;z-index:10;
+  user-select:none;
+}
+.lb-arrow:hover{background:rgba(201,146,59,.6)}
+.lb-prev{left:12px}
+.lb-next{right:12px}
+.lb-arrow.hidden{opacity:.2;pointer-events:none}
+/* counter */
+.lb-counter{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  color:rgba(255,255,255,.6);font-size:.82rem;
+  background:rgba(0,0,0,.5);padding:4px 14px;border-radius:100px;
+}
+/* thumbnail strip */
+.lb-strip{
+  position:fixed;bottom:48px;left:50%;transform:translateX(-50%);
+  display:flex;gap:6px;padding:6px;
+  background:rgba(0,0,0,.5);border-radius:var(--r);
+  max-width:90vw;overflow-x:auto;
+}
+.lb-strip::-webkit-scrollbar{display:none}
+.lb-strip-thumb{
+  width:52px;height:38px;flex-shrink:0;border-radius:5px;
+  overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;
+}
+.lb-strip-thumb img{width:100%;height:100%;object-fit:cover}
+.lb-strip-thumb.on{border-color:var(--gold)}
+.minfo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:20px}
+.minfo-blk h4{font-family:var(--fd);font-size:1.05rem;color:var(--ivory);margin-bottom:10px}
+.spl{list-style:none}
+.spl li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:.83rem}
+.spl li span:first-child{color:var(--grey)}
+.spl li span:last-child{color:var(--ivory);font-weight:500}
+.mdesc{color:var(--grey);font-size:.88rem;line-height:1.7;margin-bottom:18px}
+.mcta{display:flex;gap:10px;padding-top:16px;border-top:1px solid var(--border)}
+.btn-p{flex:1;background:var(--gold);color:var(--bg);border:none;cursor:pointer;padding:11px;
+  border-radius:var(--r);font-weight:700;font-family:inherit;transition:all .2s}
+.btn-p:hover{background:var(--gold-l)}
+.btn-s{flex:1;background:transparent;color:var(--ivory);border:1px solid var(--border);cursor:pointer;
+  padding:11px;border-radius:var(--r);font-weight:500;font-family:inherit;transition:all .2s}
+.btn-s:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ══════════════════════════════════════════
+   360° TOUR — THE MAIN FEATURE
+══════════════════════════════════════════ */
+.tour-wrap{display:flex;flex-direction:column;height:520px;position:relative;user-select:none}
+
+/* Top: room menu bar */
+.room-menu{
+  display:flex;align-items:center;gap:6px;padding:10px 14px;
+  background:var(--bg);border-bottom:1px solid var(--border);
+  overflow-x:auto;flex-shrink:0;scrollbar-width:none;
+}
+.room-menu::-webkit-scrollbar{display:none}
+.rmenu-label{font-size:.72rem;font-weight:700;color:var(--grey);white-space:nowrap;margin-right:4px;text-transform:uppercase;letter-spacing:.07em}
+.room-btn{
+  display:flex;align-items:center;gap:5px;
+  padding:6px 13px;border-radius:100px;
+  border:1px solid var(--border);background:transparent;
+  color:var(--grey);font-size:.78rem;font-weight:600;
+  cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap;flex-shrink:0;
+}
+.room-btn:hover{border-color:var(--gold);color:var(--gold)}
+.room-btn.on{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.room-btn .ricon{font-size:.95rem}
+
+/* Middle: pannellum viewer */
+#tourViewer{flex:1;position:relative;overflow:hidden;min-height:0}
+#pannellumTour{width:100%;height:100%}
+
+/* Bottom: nav bar */
+.tour-nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 16px;background:rgba(15,25,35,.95);border-top:1px solid var(--border);
+  flex-shrink:0;
+}
+.tnav-arrows{display:flex;gap:8px}
+.tnav-btn{
+  display:flex;align-items:center;gap:5px;
+  padding:7px 14px;border-radius:var(--r);
+  border:1px solid var(--border);background:var(--surface);
+  color:var(--ivory);font-size:.8rem;font-weight:600;
+  cursor:pointer;font-family:inherit;transition:all .2s;
+}
+.tnav-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold)}
+.tnav-btn:disabled{opacity:.3;cursor:not-allowed}
+.tnav-btn.next-btn{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.tnav-btn.next-btn:hover:not(:disabled){background:var(--gold-l)}
+
+/* Room progress dots */
+.tour-dots{display:flex;align-items:center;gap:5px}
+.tdot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--border);cursor:pointer;transition:all .3s;
+}
+.tdot.vis{background:var(--green)}
+.tdot.now{background:var(--gold);transform:scale(1.5)}
+
+/* Tour counter */
+.tour-counter{font-size:.78rem;color:var(--grey);white-space:nowrap}
+.tour-counter b{color:var(--gold)}
+
+/* Enter/hint tooltip */
+.enter-hint{
+  position:absolute;bottom:60px;left:50%;transform:translateX(-50%);
+  background:rgba(15,25,35,.9);backdrop-filter:blur(10px);
+  border:1px solid rgba(201,146,59,.3);
+  color:var(--ivory);padding:8px 18px;border-radius:100px;
+  font-size:.78rem;font-weight:600;pointer-events:none;
+  animation:fadein .4s ease;white-space:nowrap;z-index:10;
+}
+@keyframes fadein{from{opacity:0;transform:translateX(-50%) translateY(6px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+/* no-tour placeholder */
+.no-tour{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:var(--bg);color:var(--grey)}
+.no-tour .ni{font-size:3.5rem;opacity:.3}
+.no-tour p{font-size:.85rem}
+
+/* ─── ADD PROPERTY MODAL ─── */
+#addModal .mbox{max-width:700px}
+.aform{padding:22px}
+.fgr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ffl{grid-column:1/-1}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:2px}
+.fl{font-size:.78rem;font-weight:500;color:var(--grey)}
+.fi,.fs,.ft{background:var(--surface);border:1px solid var(--border);color:var(--ivory);
+  padding:9px 13px;border-radius:var(--r);font-size:.85rem;font-family:inherit;width:100%;transition:border-color .2s}
+.fi:focus,.fs:focus,.ft:focus{outline:none;border-color:var(--gold)}
+.ft{min-height:80px;resize:vertical}
+
+/* Room upload list */
+.room-upload-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.rul-item{
+  display:flex;align-items:center;gap:10px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:10px 12px;
+}
+.rul-thumb{width:56px;height:42px;border-radius:7px;overflow:hidden;flex-shrink:0;background:var(--bg3)}
+.rul-thumb img{width:100%;height:100%;object-fit:cover}
+.rul-info{flex:1;min-width:0}
+.rul-name-input{background:transparent;border:none;border-bottom:1px solid var(--border);
+  color:var(--ivory);font-size:.83rem;font-family:inherit;width:100%;padding:2px 0;transition:border-color .2s}
+.rul-name-input:focus{outline:none;border-bottom-color:var(--gold)}
+.rul-icon-sel{background:var(--bg3);border:1px solid var(--border);color:var(--ivory);
+  padding:3px 7px;border-radius:6px;font-size:.75rem;cursor:pointer;font-family:inherit}
+.rul-rm{background:none;border:none;color:var(--red);cursor:pointer;font-size:1rem;flex-shrink:0;padding:4px}
+
+.upload-zone{border:2px dashed var(--border);border-radius:var(--r);padding:22px;text-align:center;cursor:pointer;transition:border-color .2s}
+.upload-zone:hover{border-color:var(--gold)}
+.upload-zone .uzi{font-size:2rem;margin-bottom:6px}
+.upload-zone p{font-size:.8rem;color:var(--grey)}
+.upload-zone p b{color:var(--gold)}
+.badge360{display:inline-block;background:var(--gold);color:var(--bg);padding:2px 8px;border-radius:4px;font-size:.67rem;font-weight:800;margin-bottom:5px}
+.btn-prim{width:100%;padding:11px;background:var(--gold);color:var(--bg);border:none;cursor:pointer;
+  border-radius:var(--r);font-weight:700;font-family:inherit;transition:all .2s;margin-top:16px}
+.btn-prim:hover{background:var(--gold-l)}
+
+/* ─── TOAST ─── */
+.toast{position:fixed;bottom:22px;right:22px;background:var(--bg2);border:1px solid var(--gold);
+  color:var(--ivory);padding:10px 18px;border-radius:var(--r);font-size:.83rem;z-index:2000;
+  transform:translateX(120%);transition:transform .3s;max-width:280px}
+.toast.show{transform:translateX(0)}
+
+/* ─── ADMIN ─── */
+.admin-only{display:none!important}
+body.adm .admin-only{display:flex!important}
+.admin-badge{background:rgba(201,146,59,.15);border:1px solid rgba(201,146,59,.4);
+  color:var(--gold);font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:100px;
+  display:none;align-items:center;gap:4px}
+body.adm .admin-badge{display:flex}
+.btn-logout{padding:5px 12px;background:transparent;border:1px solid var(--border);
+  color:var(--grey);border-radius:var(--r);font-size:.75rem;cursor:pointer;
+  font-family:inherit;transition:all .2s;display:none}
+body.adm .btn-logout{display:block}
+.btn-logout:hover{border-color:var(--red);color:var(--red)}
+/* delete btn on cards */
+.card-del-btn{position:absolute;top:10px;left:10px;z-index:10;
+  background:rgba(224,91,91,.92);color:#fff;border:none;cursor:pointer;
+  width:30px;height:30px;border-radius:50%;font-size:.9rem;
+  display:none;align-items:center;justify-content:center;transition:background .2s}
+body.adm .card-del-btn{display:flex}
+.card-del-btn:hover{background:var(--red)}
+/* edit btn on cards */
+.card-edit-btn{position:absolute;top:10px;left:46px;z-index:10;
+  background:rgba(201,146,59,.92);color:var(--bg);border:none;cursor:pointer;
+  width:30px;height:30px;border-radius:50%;font-size:.85rem;
+  display:none;align-items:center;justify-content:center;transition:background .2s}
+body.adm .card-edit-btn{display:flex}
+.card-edit-btn:hover{background:var(--gold-l)}
+/* login modal */
+.login-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
+  width:100%;max-width:340px;padding:30px;text-align:center;
+  transform:scale(.95);transition:transform .3s}
+.moverlay.open .login-box{transform:scale(1)}
+.login-box h3{font-family:var(--fd);font-size:1.2rem;color:var(--ivory);margin-bottom:5px}
+.login-box p{font-size:.8rem;color:var(--grey);margin-bottom:18px}
+.login-box .fi{margin-bottom:10px;text-align:center;letter-spacing:.15em;font-size:1rem}
+.login-error{color:var(--red);font-size:.78rem;margin-top:6px;min-height:16px}
+/* edit modal */
+#editModal .mbox{max-width:680px}
+.edit-section{padding:20px 22px;border-bottom:1px solid var(--border)}
+.edit-section:last-child{border-bottom:none}
+.edit-section-title{font-size:.72rem;font-weight:700;color:var(--gold);
+  text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;
+  display:flex;align-items:center;gap:6px}
+/* photo grid in edit */
+.photo-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.photo-item{position:relative;width:80px;height:60px;border-radius:7px;overflow:hidden;
+  border:2px solid var(--border);cursor:pointer;flex-shrink:0}
+.photo-item img{width:100%;height:100%;object-fit:cover}
+.photo-item .ph-del{position:absolute;inset:0;background:rgba(224,91,91,.0);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.1rem;transition:background .2s;font-weight:700}
+.photo-item:hover .ph-del{background:rgba(224,91,91,.75)}
+.photo-item.main-photo{border-color:var(--gold)}
+.photo-item.main-photo::after{content:'★';position:absolute;bottom:2px;right:3px;
+  font-size:.6rem;color:var(--gold)}
+.add-photo-btn{width:80px;height:60px;border-radius:7px;border:2px dashed var(--border);
+  background:transparent;color:var(--gold);font-size:1.4rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:border-color .2s;flex-shrink:0}
+.add-photo-btn:hover{border-color:var(--gold)}
+/* room list in edit */
+.edit-room-list{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.edit-room-item{display:flex;align-items:center;gap:8px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:8px 10px}
+.edit-room-thumb{width:52px;height:38px;border-radius:5px;overflow:hidden;flex-shrink:0;background:var(--bg3)}
+.edit-room-thumb img{width:100%;height:100%;object-fit:cover}
+.edit-room-name{flex:1;background:transparent;border:none;border-bottom:1px solid var(--border);
+  color:var(--ivory);font-size:.82rem;font-family:inherit;padding:2px 0}
+.edit-room-name:focus{outline:none;border-bottom-color:var(--gold)}
+.edit-room-del{background:none;border:none;color:var(--red);cursor:pointer;font-size:1rem;padding:2px 4px}
+.add-room-btn{display:flex;align-items:center;gap:6px;padding:8px 14px;
+  background:rgba(201,146,59,.08);border:1px dashed rgba(201,146,59,.35);
+  color:var(--gold);border-radius:var(--r);font-size:.8rem;font-weight:600;
+  cursor:pointer;font-family:inherit;transition:all .2s;margin-top:6px;width:100%;justify-content:center}
+.add-room-btn:hover{background:rgba(201,146,59,.15)}
+.edit-save-btn{width:100%;padding:12px;background:var(--gold);color:var(--bg);
+  border:none;cursor:pointer;border-radius:var(--r);font-weight:700;
+  font-family:inherit;font-size:.95rem;transition:all .2s;margin-top:4px}
+.edit-save-btn:hover{background:var(--gold-l)}
+
+/* ─── CONTACT ─── */
+.cgrd{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:860px;margin:0 auto}
+.ci h3{font-family:var(--fd);font-size:1.25rem;color:var(--ivory);margin-bottom:10px}
+.ci p{color:var(--grey);font-size:.88rem;line-height:1.7}
+.citems{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.citem{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--grey)}
+.citem strong{color:var(--ivory)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+  .nlinks,.btn-post{display:none}
+  .hbg{display:flex}
+  .nlinks.mob{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;
+    background:var(--bg2);border-bottom:1px solid var(--border);padding:14px;z-index:299}
+  .fgr{grid-template-columns:1fr}
+  .minfo{grid-template-columns:1fr}
+  .mgal{grid-template-columns:1fr;height:auto}
+  .gmain{height:190px}
+  .gside{flex-direction:row;height:72px}
+  .mcta{flex-direction:column}
+  .tour-wrap{height:460px}
+  .fgrd{grid-template-columns:1fr 1fr}
+  .cgrd{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero h1{font-size:2rem}
+  .pgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .fgrd{grid-template-columns:1fr}
+  .sbar{flex-direction:column}
+  .sbar select,.sbar input{min-width:unset;width:100%}
+  .sbar-btn{width:100%;justify-content:center}
+  .tour-wrap{height:400px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="nb">
+  <a href="#" class="nlogo">
+    <div class="nlogo-icon">🏛️</div>
+    <span><b>Nawzad</b> Estate</span>
+  </a>
+  <ul class="nlinks" id="nl">
+    <li><a href="#props" class="active" data-i18n="nProp">Properties</a></li>
+    <li><a href="#feat" data-i18n="nFeat">Features</a></li>
+    <li><a href="#contact" data-i18n="nCont">Contact</a></li>
+  </ul>
+  <div class="nright">
+    <div class="lsw">
+      <button class="lb on" onclick="setLang('en')">EN</button>
+      <button class="lb" onclick="setLang('ku')">کو</button>
+      <button class="lb" onclick="setLang('ar')">ع</button>
+    </div>
+    <div class="admin-badge">🔑 Admin</div>
+    <button class="btn-logout" onclick="adminLogout()">Logout</button>
+    <button class="btn-post admin-only" onclick="openAdd()" data-i18n="nPost" style="display:none!important">+ Post Property</button>
+    <button id="staffBtn" onclick="triggerStaff()" title="" style="
+      width:28px;height:28px;border-radius:50%;
+      background:rgba(139,164,184,0.07);
+      border:1px solid rgba(139,164,184,0.12);
+      color:rgba(139,164,184,0.25);
+      font-size:.65rem;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
+      transition:all .3s;flex-shrink:0;
+      font-family:inherit;letter-spacing:.04em;
+    " onmouseenter="this.style.color='rgba(139,164,184,0.5)'" onmouseleave="this.style.color='rgba(139,164,184,0.25)'">⚙</button>
+    <button class="hbg" onclick="toggleMob()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-ey" data-i18n="hEy">Premium Real Estate in Kurdistan</div>
+    <h1 data-i18n="hT">Find Your <em>Dream Home</em><br>in Kurdistan</h1>
+    <p class="hero-sub" data-i18n="hS">Browse houses, apartments and land — walk through every room with immersive 360° virtual tours.</p>
+    <div class="sbar">
+      <select id="sType"><option value="" data-i18n="sAll">All Types</option><option value="house" data-i18n="tHo">House</option><option value="apartment" data-i18n="tAp">Apartment</option><option value="land" data-i18n="tLa">Land</option><option value="villa" data-i18n="tVi">Villa</option><option value="commercial" data-i18n="tCo">Commercial</option></select>
+      <select id="sStatus"><option value="" data-i18n="sAS">Sale or Rent</option><option value="sale" data-i18n="fSa">For Sale</option><option value="rent" data-i18n="fRe">For Rent</option></select>
+      <input type="text" id="sQ" data-i18n-ph="sPH">
+      <button class="sbar-btn" onclick="doSearch()">🔍 <span data-i18n="sSB">Search</span></button>
+    </div>
+    <div class="hstats">
+      <div class="hstat"><strong id="stL">0</strong><span data-i18n="stLS">Listings</span></div>
+      <div class="hstat"><strong>360°</strong><span data-i18n="stT">Virtual Tours</span></div>
+      <div class="hstat"><strong>3</strong><span data-i18n="stLg">Languages</span></div>
+      <div class="hstat"><strong>24/7</strong><span data-i18n="stSu">Support</span></div>
+    </div>
+  </div>
+  <div class="scroll-dn">↓ <span data-i18n="scD">Scroll</span></div>
+</section>
+
+<!-- PROPERTIES -->
+<section id="props">
+  <div class="sec-hd">
+    <div class="sec-ey" data-i18n="pEy">BROWSE LISTINGS</div>
+    <h2 class="sec-ti" data-i18n="pTi">Featured Properties</h2>
+    <p class="sec-su" data-i18n="pSu">Walk through every room with 360° virtual tours</p>
+  </div>
+  <div class="fbar" id="fbar">
+    <button class="fb on" onclick="fCat('all',this)" data-i18n="fAl">All</button>
+    <button class="fb" onclick="fCat('house',this)" data-i18n="fHo">Houses</button>
+    <button class="fb" onclick="fCat('apartment',this)" data-i18n="fAp">Apartments</button>
+    <button class="fb" onclick="fCat('land',this)" data-i18n="fLa">Land</button>
+    <button class="fb" onclick="fCat('villa',this)" data-i18n="fVi">Villas</button>
+    <button class="fb" onclick="fCat('commercial',this)" data-i18n="fCo">Commercial</button>
+    <button class="fb" onclick="fSt('sale',this)" data-i18n="fSale">For Sale</button>
+    <button class="fb" onclick="fSt('rent',this)" data-i18n="fRent">For Rent</button>
+  </div>
+  <div class="pgrid" id="pgrid"></div>
+</section>
+
+<!-- FEATURES -->
+<section id="feat" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="sec-hd">
+    <div class="sec-ey" data-i18n="ftEy">WHY CHOOSE US</div>
+    <h2 class="sec-ti" data-i18n="ftTi">Built for the Modern Buyer</h2>
+  </div>
+  <div class="fgrid">
+    <div class="fcard"><div class="ficon">🌐</div><div class="ftitle" data-i18n="f1T">Room-by-Room 360° Tours</div><div class="fdesc" data-i18n="f1D">Upload all your 360° photos and customers walk through every room — exterior, living room, kitchen, bedrooms — with one tap.</div></div>
+    <div class="fcard"><div class="ficon">🚪</div><div class="ftitle" data-i18n="f2T">Jump to Any Room</div><div class="fdesc" data-i18n="f2D">The room menu lets customers jump directly to any room they want — kitchen, dining, master bedroom — without going one by one.</div></div>
+    <div class="fcard"><div class="ficon">🌍</div><div class="ftitle" data-i18n="f3T">3 Languages</div><div class="fdesc" data-i18n="f3D">Full Kurdish Sorani, Arabic and English support with proper RTL layout.</div></div>
+    <div class="fcard"><div class="ficon">📱</div><div class="ftitle" data-i18n="f4T">Mobile Ready</div><div class="fdesc" data-i18n="f4D">Tilt and move your phone to look around in 360° using the gyroscope. Works on all smartphones.</div></div>
+    <div class="fcard"><div class="ficon">🏷️</div><div class="ftitle" data-i18n="f5T">Post in Minutes</div><div class="fdesc" data-i18n="f5D">Upload your photos, name the rooms, set price and details — your listing is live instantly.</div></div>
+    <div class="fcard"><div class="ficon">📞</div><div class="ftitle" data-i18n="f6T">Direct Contact</div><div class="fdesc" data-i18n="f6D">Buyers contact you directly by phone or WhatsApp. No middleman, no hidden fees.</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <h2 data-i18n="ctT">Ready to List Your Property?</h2>
+  <p data-i18n="ctS">Post your property with a full room-by-room 360° tour and reach buyers across Kurdistan.</p>
+  <div class="cta-btns">
+    <button class="btn-cg" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="ctB2">📞 Contact Us</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-hd">
+    <div class="sec-ey" data-i18n="coEy">GET IN TOUCH</div>
+    <h2 class="sec-ti" data-i18n="coTi">Contact Us</h2>
+  </div>
+  <div class="cgrd">
+    <div class="ci">
+      <h3 data-i18n="coSu">We're here to help</h3>
+      <p data-i18n="coDe">Looking for a property? Need help listing yours? Our team is in Sulaymaniyah.</p>
+      <div class="citems">
+        <div class="citem">📞 <strong>+964 750 000 0000</strong></div>
+        <div class="citem">📧 <strong>info@nawzadestate.com</strong></div>
+        <div class="citem">📍 <strong data-i18n="coCi">Sulaymaniyah, Kurdistan</strong></div>
+        <div class="citem">⏰ <span data-i18n="coHr">Sat–Thu, 9am–7pm</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="fg" style="margin-bottom:12px"><label class="fl" data-i18n="coNm">Name</label><input type="text" class="fi" data-i18n-ph="coNmPH"></div>
+      <div class="fg" style="margin-bottom:12px"><label class="fl" data-i18n="coPh">Phone</label><input type="tel" class="fi" placeholder="+964..."></div>
+      <div class="fg" style="margin-bottom:16px"><label class="fl" data-i18n="coMs">Message</label><textarea class="ft" style="min-height:85px" data-i18n-ph="coMsPH"></textarea></div>
+      <button class="btn-prim" onclick="toast('✅ '+(L.coSn||'Message sent!'))" data-i18n="coSn">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fgrd">
+    <div class="fbrand">
+      <div class="nlogo" style="margin-bottom:10px"><div class="nlogo-icon" style="width:34px;height:34px;font-size:15px">🏛️</div><span><b>Nawzad</b> Estate</span></div>
+      <p data-i18n="foD">Premium real estate listings across Kurdistan Region with 360° virtual tours.</p>
+    </div>
+    <div class="fcol"><h5 data-i18n="foP">Properties</h5><ul><li><a href="#" data-i18n="tHo">Houses</a></li><li><a href="#" data-i18n="tAp">Apartments</a></li><li><a href="#" data-i18n="tLa">Land</a></li><li><a href="#" data-i18n="tVi">Villas</a></li></ul></div>
+    <div class="fcol"><h5 data-i18n="foCi">Cities</h5><ul><li><a href="#">Sulaymaniyah</a></li><li><a href="#">Erbil</a></li><li><a href="#">Duhok</a></li><li><a href="#">Kirkuk</a></li></ul></div>
+    <div class="fcol"><h5 data-i18n="foCo">Company</h5><ul><li><a href="#" data-i18n="foAb">About</a></li><li><a href="#contact" data-i18n="nCont">Contact</a></li><li><a href="#" data-i18n="foTe">Terms</a></li><li><a href="#" data-i18n="foPr">Privacy</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <p>© 2025 Nawzad Estate. <span data-i18n="foRi">All rights reserved.</span></p>
+    <p data-i18n="foMa">Made in Sulaymaniyah 🇮🇶</p>
+  </div>
+</footer>
+
+<!-- ══ PROPERTY MODAL ══ -->
+<div class="moverlay" id="propModal">
+  <div class="mbox">
+    <div class="mhead">
+      <h3 id="mTitle">Property</h3>
+      <button class="mcls" onclick="closeModal('propModal')">✕</button>
+    </div>
+    <div class="mtabs">
+      <button class="mtab on" id="tabDet" onclick="swTab('det')" data-i18n="tbDe">Details</button>
+      <button class="mtab" id="tabTour" onclick="swTab('tour')" data-i18n="tbTo">360° Tour</button>
+    </div>
+    <div class="mbody">
+      <!-- DETAILS TAB -->
+      <div id="tcDet" class="mprop">
+        <div class="mgal">
+          <div class="gmain" onclick="openLightbox(0)"><img id="mImg" src="" alt=""></div>
+          <div class="gside">
+            <div class="gthumb" onclick="openLightbox(1)"><img id="mTh1" src="" alt=""></div>
+            <div class="gthumb" onclick="openLightbox(2)"><img id="mTh2" src="" alt=""></div>
+          </div>
+        </div>
+        <div class="minfo">
+          <div class="minfo-blk"><h4 data-i18n="mSp">Specifications</h4><ul class="spl" id="mSpecs"></ul></div>
+          <div class="minfo-blk"><h4 data-i18n="mCo">Contact</h4><ul class="spl" id="mContact"></ul></div>
+        </div>
+        <p class="mdesc" id="mDesc"></p>
+        <div class="mcta">
+          <button class="btn-p" onclick="callAgent()" data-i18n="bCa">📞 Call Agent</button>
+          <button class="btn-s" onclick="swTab('tour')" data-i18n="bTo">🌐 View 360° Tour</button>
+        </div>
+      </div>
+      <!-- TOUR TAB -->
+      <div id="tcTour" style="display:none">
+        <div class="tour-wrap" id="tourWrap">
+          <!-- Room menu (top) -->
+          <div class="room-menu" id="roomMenu">
+            <span class="rmenu-label" data-i18n="rmL">Rooms:</span>
+            <!-- buttons injected -->
+          </div>
+          <!-- Pannellum -->
+          <div id="tourViewer">
+            <div id="pannellumTour"></div>
+          </div>
+          <!-- Bottom nav -->
+          <div class="tour-nav">
+            <div class="tnav-arrows">
+              <button class="tnav-btn" id="btnPrev" onclick="tourNav(-1)">← <span data-i18n="tnPr">Previous</span></button>
+              <button class="tnav-btn next-btn" id="btnNext" onclick="tourNav(1)"><span data-i18n="tnNx">Next Room</span> →</button>
+            </div>
+            <div class="tour-dots" id="tourDots"></div>
+            <div class="tour-counter"><b id="tcCur">1</b> / <b id="tcTot">1</b> <span id="tcName" style="color:var(--ivory)"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ADD PROPERTY MODAL ══ -->
+<div class="moverlay" id="addModal">
+  <div class="mbox">
+    <div class="mhead">
+      <h3 data-i18n="adTi">Post a Property</h3>
+      <button class="mcls" onclick="closeModal('addModal')">✕</button>
+    </div>
+    <div class="mbody">
+      <div class="aform">
+        <div class="fgr">
+          <div class="fg ffl"><label class="fl" data-i18n="adNm">Property Title</label><input type="text" class="fi" id="nTitle" data-i18n-ph="adNmPH"></div>
+          <div class="fg"><label class="fl" data-i18n="adTy">Type</label>
+            <select class="fs" id="nType"><option value="house" data-i18n="tHo">House</option><option value="apartment" data-i18n="tAp">Apartment</option><option value="land" data-i18n="tLa">Land</option><option value="villa" data-i18n="tVi">Villa</option><option value="commercial" data-i18n="tCo">Commercial</option></select>
+          </div>
+          <div class="fg"><label class="fl" data-i18n="adSt">Status</label>
+            <select class="fs" id="nStatus"><option value="sale" data-i18n="fSa">For Sale</option><option value="rent" data-i18n="fRe">For Rent</option></select>
+          </div>
+          <div class="fg"><label class="fl" data-i18n="adPr">Price (USD)</label><input type="number" class="fi" id="nPrice" placeholder="120000"></div>
+          <div class="fg"><label class="fl" data-i18n="adLo">Location</label><input type="text" class="fi" id="nLoc" placeholder="Sulaymaniyah, Azadi"></div>
+          <div class="fg"><label class="fl" data-i18n="adBe">Bedrooms</label><input type="number" class="fi" id="nBeds" placeholder="3"></div>
+          <div class="fg"><label class="fl" data-i18n="adBa">Bathrooms</label><input type="number" class="fi" id="nBath" placeholder="2"></div>
+          <div class="fg"><label class="fl" data-i18n="adAr">Area (m²)</label><input type="number" class="fi" id="nArea" placeholder="180"></div>
+          <div class="fg"><label class="fl" data-i18n="adPh">Phone</label><input type="tel" class="fi" id="nPhone" placeholder="+964 750..."></div>
+          <div class="fg ffl"><label class="fl" data-i18n="adDe">Description</label><textarea class="ft" id="nDesc" data-i18n-ph="adDePH"></textarea></div>
+
+          <!-- 360° ROOMS UPLOAD -->
+          <div class="fg ffl">
+            <label class="fl" style="font-size:.85rem;color:var(--gold);font-weight:700">
+              🌐 <span data-i18n="ad36">360° Room Photos</span>
+              <span style="font-size:.72rem;color:var(--grey);font-weight:400" data-i18n="ad36H"> — Upload all rooms in order (Exterior first)</span>
+            </label>
+            <div class="upload-zone" id="roomUpZone" onclick="document.getElementById('roomFilesInput').click()">
+              <input type="file" id="roomFilesInput" accept="image/*" multiple style="display:none" onchange="handleRoomFiles(event)">
+              <div class="badge360">360°</div>
+              <div class="uzi">📷</div>
+              <p><b data-i18n="uzB">Click to upload all room photos</b></p>
+              <p data-i18n="uzH">Select multiple photos at once — each will become a room in the tour</p>
+            </div>
+            <div class="room-upload-list" id="roomUpList"></div>
+          </div>
+        </div>
+        <button class="btn-prim" onclick="submitProp()" data-i18n="adSub">Post Property</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN MODAL — invisible trigger -->
+<div class="moverlay" id="loginModal">
+  <div class="login-box">
+    <div style="font-size:2rem;margin-bottom:10px">🔑</div>
+    <h3>Admin</h3>
+    <p>Enter password</p>
+    <input type="password" class="fi" id="adminPwInput" placeholder="••••••••"
+      onkeydown="if(event.key==='Enter')checkAdminPw()">
+    <button class="btn-prim" onclick="checkAdminPw()" style="margin-top:4px">Login</button>
+    <div class="login-error" id="loginErr"></div>
+    <button onclick="closeModal('loginModal')" style="margin-top:12px;background:none;border:none;color:var(--grey);font-size:.78rem;cursor:pointer;font-family:inherit">Cancel</button>
+  </div>
+</div>
+
+<!-- EDIT PROPERTY MODAL -->
+<div class="moverlay" id="editModal">
+  <div class="mbox">
+    <div class="mhead">
+      <h3>✏️ Edit Property</h3>
+      <button class="mcls" onclick="closeModal('editModal')">✕</button>
+    </div>
+    <div class="mbody">
+
+      <!-- Basic info -->
+      <div class="edit-section">
+        <div class="edit-section-title">📋 Basic Info</div>
+        <div class="fgr">
+          <div class="fg ffl"><label class="fl">Title</label><input type="text" class="fi" id="eTitle"></div>
+          <div class="fg"><label class="fl">Type</label>
+            <select class="fs" id="eType"><option value="house">House</option><option value="apartment">Apartment</option><option value="land">Land</option><option value="villa">Villa</option><option value="commercial">Commercial</option></select>
+          </div>
+          <div class="fg"><label class="fl">Status</label>
+            <select class="fs" id="eStatus"><option value="sale">For Sale</option><option value="rent">For Rent</option></select>
+          </div>
+          <div class="fg"><label class="fl">Price (USD)</label><input type="number" class="fi" id="ePrice"></div>
+          <div class="fg"><label class="fl">Location</label><input type="text" class="fi" id="eLoc"></div>
+          <div class="fg"><label class="fl">Bedrooms</label><input type="number" class="fi" id="eBeds"></div>
+          <div class="fg"><label class="fl">Bathrooms</label><input type="number" class="fi" id="eBaths"></div>
+          <div class="fg"><label class="fl">Area (m²)</label><input type="number" class="fi" id="eArea"></div>
+          <div class="fg"><label class="fl">Phone</label><input type="tel" class="fi" id="ePhone"></div>
+          <div class="fg ffl"><label class="fl">Description</label><textarea class="ft" id="eDesc"></textarea></div>
+        </div>
+      </div>
+
+      <!-- Photos -->
+      <div class="edit-section">
+        <div class="edit-section-title">📷 Property Photos <span style="color:var(--grey);font-weight:400;font-size:.7rem">(click photo to delete · ★ = main photo)</span></div>
+        <div class="photo-grid" id="ePhotoGrid"></div>
+        <input type="file" id="ePhotoInput" accept="image/*" multiple style="display:none" onchange="addEditPhotos(event)">
+      </div>
+
+      <!-- 360° Rooms -->
+      <div class="edit-section">
+        <div class="edit-section-title">🌐 360° Rooms <span style="color:var(--grey);font-weight:400;font-size:.7rem">(rename · delete · add new)</span></div>
+        <div class="edit-room-list" id="eRoomList"></div>
+        <input type="file" id="eRoomInput" accept="image/*" style="display:none" onchange="addEditRoom(event)">
+        <button class="add-room-btn" onclick="document.getElementById('eRoomInput').click()">+ Add Room Photo</button>
+      </div>
+
+      <div class="edit-section">
+        <button class="edit-save-btn" onclick="saveEdit()">💾 Save Changes</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-arrow lb-prev" id="lbPrev" onclick="lbNav(-1)">‹</button>
+  <div class="lb-img-wrap">
+    <img id="lbImg" src="" alt="">
+  </div>
+  <button class="lb-arrow lb-next" id="lbNext" onclick="lbNav(1)">›</button>
+  <div class="lb-strip" id="lbStrip"></div>
+  <div class="lb-counter" id="lbCounter">1 / 1</div>
+</div>
+
+<div class="toast" id="toastEl"></div>
+
+<script>
+// ══════════════════════ i18n ══════════════════════
+const LANGS = {
+en:{
+  nProp:"Properties",nFeat:"Features",nCont:"Contact",nPost:"+ Post Property",
+  hEy:"Premium Real Estate in Kurdistan",
+  hT:"Find Your <em>Dream Home</em><br>in Kurdistan",
+  hS:"Browse houses, apartments and land — walk through every room with immersive 360° virtual tours.",
+  sAll:"All Types",tHo:"House",tAp:"Apartment",tLa:"Land",tVi:"Villa",tCo:"Commercial",
+  sAS:"Sale or Rent",fSa:"For Sale",fRe:"For Rent",sPH:"Sulaymaniyah, Erbil...",sSB:"Search",
+  stLS:"Listings",stT:"Virtual Tours",stLg:"Languages",stSu:"Support",scD:"Scroll",
+  pEy:"BROWSE LISTINGS",pTi:"Featured Properties",pSu:"Walk through every room with 360° virtual tours",
+  fAl:"All",fHo:"Houses",fAp:"Apartments",fLa:"Land",fVi:"Villas",fCo:"Commercial",fSale:"For Sale",fRent:"For Rent",
+  ftEy:"WHY CHOOSE US",ftTi:"Built for the Modern Buyer",
+  f1T:"Room-by-Room 360° Tours",f1D:"Upload all your 360° photos and customers walk through every room.",
+  f2T:"Jump to Any Room",f2D:"Room menu lets customers jump directly to kitchen, bedroom, or any room instantly.",
+  f3T:"3 Languages",f3D:"Full Kurdish Sorani, Arabic and English support with proper RTL layout.",
+  f4T:"Mobile Ready",f4D:"Tilt your phone to look around in 360° using the gyroscope.",
+  f5T:"Post in Minutes",f5D:"Upload photos, name the rooms, set price — live instantly.",
+  f6T:"Direct Contact",f6D:"Buyers contact you directly. No middleman, no fees.",
+  ctT:"Ready to List Your Property?",
+  ctS:"Post with a full room-by-room 360° tour and reach buyers across Kurdistan.",
+  ctB1:"Post a Property",ctB2:"Contact Us",
+  coEy:"GET IN TOUCH",coTi:"Contact Us",coSu:"We're here to help",
+  coDe:"Looking for a property? Need help listing? Our team is in Sulaymaniyah.",
+  coCi:"Sulaymaniyah, Kurdistan",coHr:"Sat–Thu, 9am–7pm",
+  coNm:"Name",coNmPH:"Your full name",coPh:"Phone",coMs:"Message",coMsPH:"How can we help?",coSn:"Send Message",
+  foD:"Premium real estate with 360° virtual tours across Kurdistan.",
+  foP:"Properties",foCi:"Cities",foCo:"Company",foAb:"About",foTe:"Terms",foPr:"Privacy",
+  foRi:"All rights reserved.",foMa:"Made in Sulaymaniyah 🇮🇶",
+  tbDe:"Details",tbTo:"360° Tour",
+  mSp:"Specifications",mCo:"Contact",bCa:"📞 Call Agent",bTo:"🌐 View 360° Tour",
+  rmL:"Rooms:",tnPr:"Previous",tnNx:"Next Room",
+  adTi:"Post a Property",adNm:"Property Title",adNmPH:"e.g. Modern Villa in Azadi",
+  adTy:"Type",adSt:"Status",adPr:"Price (USD)",adLo:"Location",
+  adBe:"Bedrooms",adBa:"Bathrooms",adAr:"Area (m²)",adPh:"Phone",adDe:"Description",adDePH:"Describe the property...",
+  ad36:"360° Room Photos",ad36H:" — Upload all rooms in order (Exterior first)",
+  uzB:"Click to upload all room photos",uzH:"Select multiple photos — each becomes a room in the tour",
+  adSub:"Post Property",
+  noTour:"No 360° tour for this property.",
+},
+ku:{
+  nProp:"خانووەکان",nFeat:"تایبەتمەندییەکان",nCont:"پەیوەندی",nPost:"+ خانوو تۆمار بکە",
+  hEy:"خانوو و زەوی لە کوردستان",
+  hT:"خانووی <em>خەونەکەت</em><br>بدۆزەرەوە",
+  hS:"خانوو، شووقە و زەوی بگەڕێ — هەر ژوور بگەڕێ بە گەشتی ٣٦٠°.",
+  sAll:"هەموو جۆرەکان",tHo:"خانوو",tAp:"شووقە",tLa:"زەوی",tVi:"ڤیلا",tCo:"بازرگانی",
+  sAS:"فرۆشتن یان کرێ",fSa:"بۆ فرۆشتن",fRe:"بۆ کرێ",sPH:"سلێمانی، هەولێر...",sSB:"گەڕان",
+  stLS:"تۆمارکراو",stT:"گەشتی ٣٦٠°",stLg:"زمان",stSu:"پشتگیری",scD:"بچرۆ خوارەوە",
+  pEy:"تۆمارەکان",pTi:"خانووە تایبەتەکان",pSu:"هەر ژوور بگەڕێ بە گەشتی ٣٦٠°",
+  fAl:"هەموو",fHo:"خانووەکان",fAp:"شووقەکان",fLa:"زەوی",fVi:"ڤیلاکان",fCo:"بازرگانی",fSale:"بۆ فرۆشتن",fRent:"بۆ کرێ",
+  ftEy:"بۆچی ئێمە",ftTi:"بۆ کڕیارە مۆدێرنەکان",
+  f1T:"گەشتی ٣٦٠° هەر ژوور",f1D:"وێنەکانت بارکە و کڕیار لە هەر ژوورێک دەگەڕێ.",
+  f2T:"ڕاستەوخۆ بچۆ هەر ژوور",f2D:"کڕیار ڕاستەوخۆ بۆ چێشتخانە، ژووری نووستن یان هەر شوێنێک دەچێت.",
+  f3T:"٣ زمان",f3D:"پشتگیری تەواو بۆ کوردی، عەرەبی و ئینگلیزی.",
+  f4T:"مۆبایل",f4D:"موبایلەکە جوڵێنە بۆ سەیرکردنی ٣٦٠° بە جایرۆسکۆپ.",
+  f5T:"لە چەند خولەک تۆمار بکە",f5D:"وێنەکان بارکە، ناوی ژوورەکان بنووسە، نرخ دابنێ.",
+  f6T:"پەیوەندی ڕاستەوخۆ",f6D:"کڕیار ڕاستەوخۆ پەیوەندیت پێوە دەگرێت. بێ ناوڕەو.",
+  ctT:"ئامادەی تۆماركردنی خانووەکەتیت؟",
+  ctS:"خانووت بتۆمارە بە گەشتی تەواوی ژووری ژوور و بگەیت بە کڕیاران لە کوردستان.",
+  ctB1:"خانوو تۆمار بکە",ctB2:"پەیوەندیمان پێوە بکە",
+  coEy:"پەیوەندی",coTi:"پەیوەندیمان پێوە بکە",coSu:"ئێمە ئامادەین",
+  coDe:"بۆ خانوویەک دەگەڕێیت؟ تیمی ئێمە لە سلێمانی هەیە.",
+  coCi:"سلێمانی، کوردستان",coHr:"شەممە-پێنجشەممە، ٩ص-٧ع",
+  coNm:"ناوت",coNmPH:"ناوی تەواوت",coPh:"تەلەفۆن",coMs:"نامە",coMsPH:"چۆن یارمەتیت بدەین؟",coSn:"ناردن",
+  foD:"تۆمارکردنی خانووو زەوی لە کوردستان بە گەشتی ٣٦٠°.",
+  foP:"خانووەکان",foCi:"شارەکان",foCo:"کۆمپانیا",foAb:"دەربارە",foTe:"مەرجەکان",foPr:"پاراستن",
+  foRi:"هەموو مافەکان پارێزراون.",foMa:"دروستکراوە لە سلێمانی 🇮🇶",
+  tbDe:"وردەکاری",tbTo:"گەشتی ٣٦٠°",
+  mSp:"تایبەتمەندییەکان",mCo:"پەیوەندی",bCa:"📞 پەیوەندی",bTo:"🌐 گەشتی ٣٦٠°",
+  rmL:"ژوورەکان:",tnPr:"پێشوو",tnNx:"ژووری داهاتوو",
+  adTi:"خانوو تۆمار بکە",adNm:"ناوی خانوو",adNmPH:"مەسەلەن: ڤیلای مۆدێرن لە ئازادی",
+  adTy:"جۆر",adSt:"دۆخ",adPr:"نرخ (دۆلار)",adLo:"شوێن",
+  adBe:"ژووری نووستن",adBa:"حەمام",adAr:"فراوانی (م²)",adPh:"تەلەفۆن",adDe:"وەسف",adDePH:"خانووەکە وەسف بکە...",
+  ad36:"وێنەکانی ٣٦٠° ژوورەکان",ad36H:" — ئەمە بارکە بە ڕیز (دەرەوە یەکەم)",
+  uzB:"کلیک بکە بۆ بارکردنی هەموو وێنەکان",uzH:"چەند وێنەیەک هەڵبژێرە — هەر وێنەیەک دەبێتە ژوورێک",
+  adSub:"تۆماركردن",
+  noTour:"گەشتی ٣٦٠° نییە بۆ ئەم خانووە.",
+},
+ar:{
+  nProp:"العقارات",nFeat:"المميزات",nCont:"اتصل بنا",nPost:"+ أضف عقاراً",
+  hEy:"عقارات مميزة في كوردستان",
+  hT:"ابحث عن <em>منزل أحلامك</em><br>في كوردستان",
+  hS:"تصفح البيوت والشقق والأراضي — جول في كل غرفة بجولات افتراضية 360°.",
+  sAll:"كل الأنواع",tHo:"بيت",tAp:"شقة",tLa:"أرض",tVi:"فيلا",tCo:"تجاري",
+  sAS:"بيع أو إيجار",fSa:"للبيع",fRe:"للإيجار",sPH:"السليمانية، أربيل...",sSB:"بحث",
+  stLS:"إعلان",stT:"جولة 360°",stLg:"لغة",stSu:"دعم",scD:"للأسفل",
+  pEy:"تصفح الإعلانات",pTi:"العقارات المميزة",pSu:"جول في كل غرفة بجولات افتراضية 360°",
+  fAl:"الكل",fHo:"بيوت",fAp:"شقق",fLa:"أراضي",fVi:"فيلات",fCo:"تجاري",fSale:"للبيع",fRent:"للإيجار",
+  ftEy:"لماذا نحن",ftTi:"مصمم للمشتري العصري",
+  f1T:"جولات 360° غرفة بغرفة",f1D:"ارفع صور 360° وسيتجول المشتري في كل غرفة.",
+  f2T:"انتقل لأي غرفة مباشرة",f2D:"قائمة الغرف تتيح الانتقال مباشرة للمطبخ أو غرفة النوم أو أي غرفة.",
+  f3T:"3 لغات",f3D:"دعم كامل للكوردية والعربية والإنجليزية مع تصميم RTL.",
+  f4T:"جاهز للموبايل",f4D:"حرّك هاتفك للتجول في 360° باستخدام الجيروسكوب.",
+  f5T:"انشر في دقائق",f5D:"ارفع الصور وسمّ الغرف وحدد السعر — ينشر فوراً.",
+  f6T:"تواصل مباشر",f6D:"المشترون يتواصلون معك مباشرة. لا وسطاء ولا رسوم.",
+  ctT:"هل أنت مستعد لنشر عقارك؟",
+  ctS:"انشر مع جولة كاملة غرفة بغرفة وتواصل مع المشترين في كوردستان.",
+  ctB1:"نشر عقار",ctB2:"اتصل بنا",
+  coEy:"تواصل معنا",coTi:"اتصل بنا",coSu:"نحن هنا للمساعدة",
+  coDe:"تبحث عن عقار؟ تحتاج مساعدة؟ فريقنا في السليمانية.",
+  coCi:"السليمانية، كوردستان",coHr:"السبت-الخميس، 9ص-7م",
+  coNm:"الاسم",coNmPH:"اسمك الكامل",coPh:"الهاتف",coMs:"الرسالة",coMsPH:"كيف يمكننا مساعدتك؟",coSn:"إرسال",
+  foD:"إعلانات عقارية مميزة في إقليم كوردستان مع جولات 360°.",
+  foP:"العقارات",foCi:"المدن",foCo:"الشركة",foAb:"عن الشركة",foTe:"الشروط",foPr:"الخصوصية",
+  foRi:"جميع الحقوق محفوظة.",foMa:"صُنع في السليمانية 🇮🇶",
+  tbDe:"التفاصيل",tbTo:"جولة 360°",
+  mSp:"المواصفات",mCo:"التواصل",bCa:"📞 اتصل",bTo:"🌐 جولة 360°",
+  rmL:"الغرف:",tnPr:"السابق",tnNx:"الغرفة التالية",
+  adTi:"نشر عقار",adNm:"عنوان العقار",adNmPH:"مثال: فيلا حديثة في أزادي",
+  adTy:"النوع",adSt:"الحالة",adPr:"السعر (دولار)",adLo:"الموقع",
+  adBe:"غرف النوم",adBa:"الحمامات",adAr:"المساحة (م²)",adPh:"الهاتف",adDe:"الوصف",adDePH:"صف العقار...",
+  ad36:"صور الغرف 360°",ad36H:" — ارفع كل الغرف بالترتيب (الخارج أولاً)",
+  uzB:"اضغط لرفع صور كل الغرف",uzH:"اختر صوراً متعددة — كل صورة تصبح غرفة في الجولة",
+  adSub:"نشر العقار",
+  noTour:"لا توجد جولة 360° لهذا العقار.",
+}};
+
+let lang='en', L=LANGS.en;
+let catF='all', stF='', viewerInst=null, curProp=null, curRoom=0;
+
+function setLang(l){
+  lang=l; L=LANGS[l];
+  const rtl=l==='ku'||l==='ar';
+  document.documentElement.lang=l;
+  document.documentElement.dir=rtl?'rtl':'ltr';
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.lb').forEach(b=>{
+    if((l==='en'&&b.textContent==='EN')||(l==='ku'&&b.textContent==='کو')||(l==='ar'&&b.textContent==='ع'))b.classList.add('on');
+  });
+  applyT(); renderProps();
+  if(curProp) buildRoomMenu();
+}
+function applyT(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(L[k]!==undefined)el.innerHTML=L[k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(L[k])el.placeholder=L[k];});
+}
+
+// ══ SAMPLE DATA ══
+const IMGS=[
+  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80',
+  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
+  'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80',
+  'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80',
+  'https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600&q=80',
+  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+];
+// Demo 360° panoramas (equirectangular) — will be replaced by your real uploads
+const DEMO360=[
+  'https://pannellum.org/images/alma.jpg',
+  'https://pannellum.org/images/cerro-toco-0.jpg',
+  'https://pannellum.org/images/jfk.jpg',
+];
+const ROOM_ICONS={'Exterior':'🌿','Living Room':'🛋','Bedroom 1':'🛏','Bedroom 2':'🛏','Kitchen':'🍳','Bathroom':'🚿','Dining Room':'🪑','Garage':'🚗','Garden':'🌳','Balcony':'🌅','Study':'📚','Pool':'🏊'};
+
+let props=[
+  {id:1,type:'villa',status:'sale',price:245000,cur:'$',area:320,beds:5,baths:3,
+   loc:'Azadi, Sulaymaniyah',isNew:true,agent:'+964 750 111 2222',
+   title:{en:'Luxury Villa in Azadi',ku:'ڤیلای فاخر لە ئازادی',ar:'فيلا فاخرة في أزادي'},
+   desc:{en:'Stunning 5-bedroom villa with private garden and panoramic views of Sulaymaniyah.',ku:'ڤیلایەکی ٥ ژووری نووستن بە باخچەی تایبەت.',ar:'فيلا رائعة بـ5 غرف نوم مع حديقة خاصة.'},
+   img:IMGS[0],
+   rooms:[
+     {name:'Exterior',icon:'🌿',src:DEMO360[0]},
+     {name:'Living Room',icon:'🛋',src:DEMO360[1]},
+     {name:'Kitchen',icon:'🍳',src:DEMO360[2]},
+     {name:'Bedroom 1',icon:'🛏',src:DEMO360[0]},
+     {name:'Garden',icon:'🌳',src:DEMO360[1]},
+   ]},
+  {id:2,type:'apartment',status:'rent',price:500,cur:'$',pU:'/mo',area:120,beds:3,baths:2,
+   loc:'Salim St, Sulaymaniyah',agent:'+964 770 333 4444',
+   title:{en:'Modern Apartment on Salim St',ku:'شووقەی مۆدێرن لە شەقامی سالم',ar:'شقة حديثة في شارع سالم'},
+   desc:{en:'Bright 3-bedroom apartment on 4th floor with parking and security.',ku:'شووقەی ٣ ژووری روناک لە قاتی ٤.',ar:'شقة مضيئة بـ3 غرف في الطابق الرابع.'},
+   img:IMGS[1],
+   rooms:[
+     {name:'Exterior',icon:'🌿',src:DEMO360[1]},
+     {name:'Living Room',icon:'🛋',src:DEMO360[2]},
+     {name:'Kitchen',icon:'🍳',src:DEMO360[0]},
+     {name:'Bedroom 1',icon:'🛏',src:DEMO360[1]},
+     {name:'Bathroom',icon:'🚿',src:DEMO360[2]},
+   ]},
+  {id:3,type:'land',status:'sale',price:85000,cur:'$',area:500,beds:0,baths:0,
+   loc:'Bakrajo, Sulaymaniyah',isNew:true,agent:'+964 750 555 6666',
+   title:{en:'Commercial Land in Bakrajo',ku:'زەوی بازرگانی لە بەکرەجۆ',ar:'أرض تجارية في باكرجو'},
+   desc:{en:'500m² land on main road, suitable for shops or offices.',ku:'٥٠٠ م² زەوی بازرگانی لە ڕێگای سەرەکی.',ar:'أرض 500م² على الشارع الرئيسي.'},
+   img:IMGS[2], rooms:[]},
+  {id:4,type:'house',status:'sale',price:160000,cur:'$',area:200,beds:4,baths:2,
+   loc:'Qadisiya, Sulaymaniyah',agent:'+964 770 777 8888',
+   title:{en:'Family House in Qadisiya',ku:'خانووی خێزانی لە قادسییە',ar:'بيت عائلي في القادسية'},
+   desc:{en:'4-bedroom family home with garden and garage, close to schools.',ku:'خانووی خێزانی ٤ ژوور بە باخچە و گاراج.',ar:'منزل عائلي بـ4 غرف مع حديقة وكراج.'},
+   img:IMGS[3],
+   rooms:[
+     {name:'Exterior',icon:'🌿',src:DEMO360[2]},
+     {name:'Living Room',icon:'🛋',src:DEMO360[0]},
+     {name:'Dining Room',icon:'🪑',src:DEMO360[1]},
+     {name:'Kitchen',icon:'🍳',src:DEMO360[2]},
+     {name:'Bedroom 1',icon:'🛏',src:DEMO360[0]},
+     {name:'Bedroom 2',icon:'🛏',src:DEMO360[1]},
+     {name:'Garden',icon:'🌳',src:DEMO360[2]},
+   ]},
+  {id:5,type:'apartment',status:'sale',price:95000,cur:'$',area:140,beds:3,baths:2,
+   loc:'Raparin, Sulaymaniyah',agent:'+964 750 999 0000',
+   title:{en:'3-Bed Apartment in Raparin',ku:'شووقەی ٣ ژووری نووستن لە ڕاپەرین',ar:'شقة 3 غرف في رابرين'},
+   desc:{en:'Spacious apartment with mountain view and renovated kitchen.',ku:'شووقەی فراوان بە دیمەنی چیا.',ar:'شقة واسعة بإطلالة جبلية.'},
+   img:IMGS[4],
+   rooms:[
+     {name:'Exterior',icon:'🌿',src:DEMO360[0]},
+     {name:'Living Room',icon:'🛋',src:DEMO360[1]},
+     {name:'Kitchen',icon:'🍳',src:DEMO360[2]},
+     {name:'Bedroom 1',icon:'🛏',src:DEMO360[0]},
+     {name:'Balcony',icon:'🌅',src:DEMO360[1]},
+   ]},
+  {id:6,type:'commercial',status:'rent',price:800,cur:'$',pU:'/mo',area:80,beds:0,baths:1,
+   loc:'Kawa St, Sulaymaniyah',agent:'+964 770 100 2000',
+   title:{en:'Shop on Kawa Street',ku:'دوکان لە شەقامی کاوە',ar:'محل تجاري في شارع كاوة'},
+   desc:{en:'Ground floor shop on busy Kawa Street, ready with electricity and water.',ku:'دوکان لە شەقامی کاوەی قەرەبالغ.',ar:'محل في الطابق الأرضي في شارع كاوة.'},
+   img:IMGS[5], rooms:[]},
+];
+
+// ══ RENDER CARDS ══
+function renderProps(){
+  const g=document.getElementById('pgrid');
+  let list=props.filter(p=>{
+    if(catF!=='all'&&p.type!==catF)return false;
+    if(stF&&p.status!==stF)return false;
+    const q=document.getElementById('sQ')?.value?.toLowerCase();
+    if(q&&!(p.loc.toLowerCase().includes(q)||Object.values(p.title).some(v=>v.toLowerCase().includes(q))))return false;
+    const st=document.getElementById('sStatus')?.value;
+    if(st&&p.status!==st)return false;
+    const ty=document.getElementById('sType')?.value;
+    if(ty&&p.type!==ty)return false;
+    return true;
+  });
+  document.getElementById('stL').textContent=props.length;
+  if(!list.length){
+    g.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--grey)"><div style="font-size:3rem;margin-bottom:16px">🏠</div><p>No properties found.</p></div>`;
+    return;
+  }
+  g.innerHTML=list.map(p=>{
+    const ti=p.title[lang]||p.title.en;
+    return`<div class="pcard" onclick="openProp(${p.id})">
+      <div class="card-img">
+        <img src="${p.img}" alt="${ti}" loading="lazy">
+        <span class="cbadge ${p.status==='sale'?'bs':'br'}">${p.status==='sale'?L.fSa:L.fRe}</span>
+        ${p.isNew?'<span class="cnew">NEW</span>':''}
+        <button class="card-del-btn" onclick="deleteProp(${p.id},event)" title="Delete">✕</button>
+        <button class="card-edit-btn" onclick="openEdit(${p.id},event)" title="Edit">✏️</button>
+        <div class="c360-ov">
+          ${p.rooms&&p.rooms.length?`<button class="c360-btn" onclick="event.stopPropagation();openTour(${p.id})">🌐 360° Tour</button>`:''}
+        </div>
+      </div>
+      <div class="cbody">
+        <div class="ctype">${L['t'+p.type.charAt(0).toUpperCase()+p.type.slice(1)]||p.type}</div>
+        <div class="ctitle">${ti}</div>
+        <div class="cloc">📍 ${p.loc}</div>
+        <div class="cspecs">
+          ${p.beds>0?`<div class="spec">🛏 ${p.beds}</div>`:''}
+          ${p.baths>0?`<div class="spec">🚿 ${p.baths}</div>`:''}
+          <div class="spec">📐 ${p.area}m²</div>
+          ${p.rooms&&p.rooms.length?`<div class="spec" style="color:var(--gold)">🌐 ${p.rooms.length} rooms</div>`:''}
+        </div>
+        <div class="cfoot">
+          <div class="cprice">${p.cur}${p.price.toLocaleString()}<small>${p.pU||''}</small></div>
+          <button class="btn-det" onclick="event.stopPropagation();openProp(${p.id})">${L.tbDe}</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function fCat(c,btn){catF=c;stF='';document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderProps();}
+function fSt(s,btn){stF=stF===s?'':s;catF='all';document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));if(stF)btn.classList.add('on');renderProps();}
+function doSearch(){renderProps();}
+
+// ══ MODAL OPEN / CLOSE ══
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');document.body.style.overflow='';
+  if(id==='propModal'){destroyViewer();curProp=null;}
+}
+document.querySelectorAll('.moverlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m.id);}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.moverlay.open').forEach(m=>closeModal(m.id));});
+
+// ══ OPEN PROPERTY ══
+function openProp(id){
+  const p=props.find(x=>x.id===id); if(!p)return;
+  curProp=p; curRoom=0;
+  const ti=p.title[lang]||p.title.en;
+  const de=p.desc[lang]||p.desc.en;
+  document.getElementById('mTitle').textContent=ti;
+  document.getElementById('mImg').src=p.img;
+  document.getElementById('mTh1').src=IMGS[(id)%IMGS.length];
+  document.getElementById('mTh2').src=IMGS[(id+1)%IMGS.length];
+  document.getElementById('mDesc').textContent=de;
+  document.getElementById('mSpecs').innerHTML=`
+    <li><span>${L.adTy}</span><span>${L['t'+p.type.charAt(0).toUpperCase()+p.type.slice(1)]||p.type}</span></li>
+    <li><span>${L.adAr}</span><span>${p.area} m²</span></li>
+    ${p.beds>0?`<li><span>${L.adBe}</span><span>${p.beds}</span></li>`:''}
+    ${p.baths>0?`<li><span>${L.adBa}</span><span>${p.baths}</span></li>`:''}
+    <li><span>${L.adSt}</span><span>${p.status==='sale'?L.fSa:L.fRe}</span></li>
+    <li><span>${L.adPr}</span><span style="color:var(--gold);font-weight:700">${p.cur}${p.price.toLocaleString()}${p.pU||''}</span></li>
+  `;
+  document.getElementById('mContact').innerHTML=`
+    <li><span>${L.adPh}</span><span>${p.agent||'-'}</span></li>
+    <li><span>${L.adLo}</span><span>${p.loc}</span></li>
+    ${p.rooms&&p.rooms.length?`<li><span>360°</span><span style="color:var(--green)">✅ ${p.rooms.length} rooms</span></li>`:''}
+  `;
+  swTab('det');
+  openModal('propModal');
+}
+function openTour(id){const p=props.find(x=>x.id===id);if(!p)return;curProp=p;curRoom=0;openModal('propModal');swTab('tour');}
+function callAgent(){if(curProp)window.location.href='tel:'+(curProp.agent||'').replace(/\s/g,'');}
+
+// ══ TAB SWITCH ══
+function swTab(t){
+  document.getElementById('tcDet').style.display=t==='det'?'block':'none';
+  document.getElementById('tcTour').style.display=t==='tour'?'block':'none';
+  document.getElementById('tabDet').classList.toggle('on',t==='det');
+  document.getElementById('tabTour').classList.toggle('on',t==='tour');
+  if(t==='tour'&&curProp){
+    buildRoomMenu();
+    loadRoom(curRoom);
+  }
+  if(t==='det') destroyViewer();
+}
+
+// ══ 360 TOUR SYSTEM ══
+function buildRoomMenu(){
+  const rm=document.getElementById('roomMenu');
+  const p=curProp;
+  if(!p||!p.rooms||!p.rooms.length){
+    rm.innerHTML=`<span style="font-size:.8rem;color:var(--grey)">${L.noTour}</span>`;
+    return;
+  }
+  rm.innerHTML=`<span class="rmenu-label">${L.rmL}</span>`+
+    p.rooms.map((r,i)=>`
+      <button class="room-btn ${i===curRoom?'on':''}" id="rbtn_${i}" onclick="goRoom(${i})">
+        <span class="ricon">${r.icon}</span> ${r.name}
+      </button>
+    `).join('');
+}
+
+function buildDots(){
+  const p=curProp; if(!p||!p.rooms) return;
+  document.getElementById('tourDots').innerHTML=p.rooms.map((r,i)=>
+    `<div class="tdot ${i===curRoom?'now':i<curRoom?'vis':''}" onclick="goRoom(${i})" title="${r.name}"></div>`
+  ).join('');
+  document.getElementById('tcCur').textContent=curRoom+1;
+  document.getElementById('tcTot').textContent=p.rooms.length;
+  document.getElementById('tcName').textContent=p.rooms[curRoom]?.name||'';
+}
+
+function goRoom(i){
+  curRoom=i;
+  loadRoom(i);
+}
+
+function tourNav(dir){
+  if(!curProp||!curProp.rooms) return;
+  const next=curRoom+dir;
+  if(next<0||next>=curProp.rooms.length) return;
+  curRoom=next;
+  loadRoom(curRoom);
+}
+
+function loadRoom(i){
+  const p=curProp;
+  if(!p||!p.rooms||!p.rooms.length){
+    document.getElementById('pannellumTour').innerHTML=`<div class="no-tour"><div class="ni">🌐</div><p>${L.noTour}</p></div>`;
+    document.getElementById('roomMenu').innerHTML=`<span style="font-size:.8rem;color:var(--grey)">${L.noTour}</span>`;
+    document.getElementById('tourDots').innerHTML='';
+    document.getElementById('btnPrev').disabled=true;
+    document.getElementById('btnNext').disabled=true;
+    return;
+  }
+
+  // update room menu highlights
+  document.querySelectorAll('.room-btn').forEach((b,idx)=>b.classList.toggle('on',idx===i));
+
+  // nav button states
+  document.getElementById('btnPrev').disabled=(i===0);
+  document.getElementById('btnNext').disabled=(i===p.rooms.length-1);
+
+  buildDots();
+
+  const room=p.rooms[i];
+  destroyViewer();
+
+  // Show hint for first room
+  showHint(i===0 ? (lang==='ar'?'استخدم قائمة الغرف للانتقال مباشرة لأي غرفة':lang==='ku'?'مێنیوی ژوورەکان بەکاربێنە':' Use the room menu above to jump to any room') : null);
+
+  const container=document.getElementById('pannellumTour');
+  container.innerHTML='';
+
+  setTimeout(()=>{
+    try {
+      viewerInst=pannellum.viewer('pannellumTour',{
+        type:'equirectangular',
+        panorama:room.src,
+        autoLoad:true,
+        autoRotate:-1.5,
+        showControls:true,
+        orientationOnByDefault:true,
+        strings:{loadButtonLabel:"Click to Load",loadingLabel:"Loading..."}
+      });
+    } catch(e){
+      container.innerHTML=`<div class="no-tour"><div class="ni">⚠️</div><p>Could not load 360° image.</p></div>`;
+    }
+  },80);
+}
+
+let hintTimer=null;
+function showHint(msg){
+  const tw=document.getElementById('tourWrap');
+  const old=tw.querySelector('.enter-hint');
+  if(old)old.remove();
+  if(!msg)return;
+  const h=document.createElement('div');
+  h.className='enter-hint';h.textContent=msg;
+  tw.appendChild(h);
+  clearTimeout(hintTimer);
+  hintTimer=setTimeout(()=>h.remove(),4000);
+}
+
+function destroyViewer(){
+  if(viewerInst){try{viewerInst.destroy();}catch(e){}viewerInst=null;}
+  const c=document.getElementById('pannellumTour');
+  if(c)c.innerHTML='';
+}
+
+// ══ ADD PROPERTY ══
+let newRooms=[];
+function openAdd(){
+  if(!isAdmin){ openModal('loginModal'); return; }
+  newRooms=[];
+  document.getElementById('roomUpList').innerHTML='';
+  document.getElementById('nTitle').value='';
+  document.getElementById('nPrice').value='';
+  document.getElementById('nLoc').value='';
+  document.getElementById('nBeds').value='';
+  document.getElementById('nBath').value='';
+  document.getElementById('nArea').value='';
+  document.getElementById('nPhone').value='';
+  document.getElementById('nDesc').value='';
+  openModal('addModal');
+}
+
+function handleRoomFiles(e){
+  const files=Array.from(e.target.files);
+  files.forEach((file,fi)=>{
+    const url=URL.createObjectURL(file);
+    const name=file.name.replace(/\.[^.]+$/,'').replace(/[-_]/g,' ');
+    const guess=Object.keys(ROOM_ICONS).find(k=>name.toLowerCase().includes(k.toLowerCase()))||'';
+    const icon=ROOM_ICONS[guess]||'🏠';
+    const room={name:guess||name||`Room ${newRooms.length+1}`,icon,src:url};
+    newRooms.push(room);
+    renderRoomList();
+  });
+  e.target.value='';
+}
+
+function renderRoomList(){
+  const list=document.getElementById('roomUpList');
+  list.innerHTML=newRooms.map((r,i)=>`
+    <div class="rul-item">
+      <div class="rul-thumb"><img src="${r.src}" alt="${r.name}"></div>
+      <div class="rul-info">
+        <input class="rul-name-input" value="${r.name}" placeholder="Room name" onchange="newRooms[${i}].name=this.value">
+        <div style="margin-top:5px;display:flex;align-items:center;gap:6px">
+          <select class="rul-icon-sel" onchange="newRooms[${i}].icon=this.value">
+            ${Object.entries(ROOM_ICONS).map(([k,v])=>`<option value="${v}" ${v===r.icon?'selected':''}>${v} ${k}</option>`).join('')}
+          </select>
+          <span style="font-size:.72rem;color:var(--grey)">${i===0?'(First = Exterior)':''}</span>
+        </div>
+      </div>
+      <button class="rul-rm" onclick="removeRoom(${i})">✕</button>
+    </div>
+  `).join('');
+}
+
+function removeRoom(i){newRooms.splice(i,1);renderRoomList();}
+
+function submitProp(){
+  const title=document.getElementById('nTitle').value.trim();
+  const price=parseFloat(document.getElementById('nPrice').value);
+  const loc=document.getElementById('nLoc').value.trim();
+  if(!title||!price||!loc){toast('⚠️ '+(lang==='ar'?'يرجى ملء الحقول المطلوبة':lang==='ku'?'خانە پێویستەکان پڕ بکەوە':'Fill in required fields'));return;}
+  const p={
+    id:Date.now(),
+    type:document.getElementById('nType').value,
+    status:document.getElementById('nStatus').value,
+    price,cur:'$',pU:document.getElementById('nStatus').value==='rent'?'/mo':'',
+    area:parseInt(document.getElementById('nArea').value)||0,
+    beds:parseInt(document.getElementById('nBeds').value)||0,
+    baths:parseInt(document.getElementById('nBath').value)||0,
+    loc, agent:document.getElementById('nPhone').value.trim(),
+    isNew:true,
+    title:{en:title,ku:title,ar:title},
+    desc:{en:document.getElementById('nDesc').value||'',ku:document.getElementById('nDesc').value||'',ar:document.getElementById('nDesc').value||''},
+    img:newRooms.length?newRooms[0].src:IMGS[Math.floor(Math.random()*IMGS.length)],
+    rooms:[...newRooms]
+  };
+  props.unshift(p);
+  closeModal('addModal');
+  renderProps();
+  newRooms=[];
+  toast('✅ '+(lang==='ar'?'تم نشر العقار!':lang==='ku'?'خانووەکە تۆمارکرا!':'Property posted!'));
+}
+
+// ══ LIGHTBOX ══
+let lbImages = [];   // all photo URLs for current property
+let lbIndex  = 0;
+
+function openLightbox(startIndex) {
+  // collect all gallery images for this property
+  const imgs = [
+    document.getElementById('mImg').src,
+    document.getElementById('mTh1').src,
+    document.getElementById('mTh2').src,
+  ].filter(s => s && !s.endsWith('/'));
+
+  // also include any extra room photos stored on the property
+  if (curProp && curProp.photos && curProp.photos.length) {
+    curProp.photos.forEach(function(u){ if(imgs.indexOf(u)<0) imgs.push(u); });
+  }
+
+  lbImages = imgs;
+  lbIndex  = Math.min(startIndex, imgs.length - 1);
+  renderLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  // restore scroll only if no other modal is open
+  if (!document.querySelector('.moverlay.open')) {
+    document.body.style.overflow = '';
+  }
+}
+
+function lbNav(dir) {
+  lbIndex = Math.max(0, Math.min(lbImages.length - 1, lbIndex + dir));
+  renderLightbox();
+}
+
+function renderLightbox() {
+  var img     = document.getElementById('lbImg');
+  var counter = document.getElementById('lbCounter');
+  var strip   = document.getElementById('lbStrip');
+  var prev    = document.getElementById('lbPrev');
+  var next    = document.getElementById('lbNext');
+
+  img.src = lbImages[lbIndex];
+  counter.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+
+  prev.classList.toggle('hidden', lbIndex === 0);
+  next.classList.toggle('hidden', lbIndex === lbImages.length - 1);
+
+  // thumbnail strip
+  strip.innerHTML = lbImages.map(function(src, i) {
+    return '<div class="lb-strip-thumb ' + (i === lbIndex ? 'on' : '') + '" onclick="lbGoto(' + i + ')">' +
+           '<img src="' + src + '" alt=""></div>';
+  }).join('');
+}
+
+function lbGoto(i) { lbIndex = i; renderLightbox(); }
+
+// close lightbox on backdrop click
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+
+// keyboard: arrow keys + Escape for lightbox
+document.addEventListener('keydown', function(e) {
+  var lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'ArrowLeft')  lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+  if (e.key === 'Escape')     closeLightbox();
+});
+
+// ══════════════════════════════════════════
+// ADMIN SYSTEM
+// ══════════════════════════════════════════
+// ⚠️  CHANGE THIS PASSWORD BEFORE DEPLOYING
+const ADMIN_PW = 'nawzad2025';
+// Secret trigger: type this word anywhere on the page (no input focused)
+// Change it to something only you know
+const SECRET_WORD = 'n@wzad';
+
+let isAdmin = false;
+let editingId = null;
+let editPhotos = [];   // [{src, isMain}]
+let editRooms  = [];   // [{name, icon, src}]
+
+// ── invisible trigger 1: type secret word anywhere ──
+let secretBuf = '';
+document.addEventListener('keydown', function(e) {
+  const tag = document.activeElement.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+  secretBuf += e.key;
+  if (secretBuf.length > SECRET_WORD.length) secretBuf = secretBuf.slice(-SECRET_WORD.length);
+  if (secretBuf === SECRET_WORD) {
+    secretBuf = '';
+    if (isAdmin) adminLogout();
+    else { openModal('loginModal'); setTimeout(function(){ document.getElementById('adminPwInput').focus(); }, 80); }
+  }
+});
+
+// ── trigger 2: staff button in navbar (looks like a tiny settings icon) ──
+var staffClicks = 0, staffTimer;
+function triggerStaff() {
+  staffClicks++;
+  clearTimeout(staffTimer);
+  staffTimer = setTimeout(function(){ staffClicks = 0; }, 1500);
+  if (staffClicks >= 3) {
+    staffClicks = 0;
+    if (isAdmin) adminLogout();
+    else { openModal('loginModal'); setTimeout(function(){ document.getElementById('adminPwInput').focus(); }, 80); }
+  }
+}
+
+function checkAdminPw() {
+  const val = document.getElementById('adminPwInput').value;
+  if (val === ADMIN_PW) {
+    isAdmin = true;
+    document.body.classList.add('adm');
+    closeModal('loginModal');
+    document.getElementById('adminPwInput').value = '';
+    document.getElementById('loginErr').textContent = '';
+    renderProps();
+    toast('🔑 Admin mode — welcome back');
+  } else {
+    document.getElementById('loginErr').textContent = '✕ Wrong password';
+    document.getElementById('adminPwInput').value = '';
+    document.getElementById('adminPwInput').focus();
+  }
+}
+
+function adminLogout() {
+  isAdmin = false;
+  document.body.classList.remove('adm');
+  renderProps();
+  toast('👋 Logged out');
+}
+
+// ── DELETE ──
+function deleteProp(id, e) {
+  e.stopPropagation();
+  if (!isAdmin) return;
+  if (!confirm('Delete this property?')) return;
+  props = props.filter(function(p){ return p.id !== id; });
+  renderProps();
+  toast('🗑 Deleted');
+}
+
+// ── OPEN EDIT ──
+function openEdit(id, e) {
+  e.stopPropagation();
+  if (!isAdmin) return;
+  const p = props.find(function(x){ return x.id === id; });
+  if (!p) return;
+  editingId = id;
+
+  // fill basic fields
+  document.getElementById('eTitle').value  = p.title.en || '';
+  document.getElementById('eType').value   = p.type || 'house';
+  document.getElementById('eStatus').value = p.status || 'sale';
+  document.getElementById('ePrice').value  = p.price || '';
+  document.getElementById('eLoc').value    = p.loc || '';
+  document.getElementById('eBeds').value   = p.beds || '';
+  document.getElementById('eBaths').value  = p.baths || '';
+  document.getElementById('eArea').value   = p.area || '';
+  document.getElementById('ePhone').value  = p.agent || '';
+  document.getElementById('eDesc').value   = p.desc ? (p.desc.en || '') : '';
+
+  // photos: build list from p.photos or fallback to main img
+  editPhotos = [];
+  if (p.photos && p.photos.length) {
+    p.photos.forEach(function(src, i){ editPhotos.push({src:src, isMain:i===0}); });
+  } else if (p.img) {
+    editPhotos.push({src:p.img, isMain:true});
+  }
+
+  // rooms
+  editRooms = (p.rooms || []).map(function(r){ return {name:r.name, icon:r.icon, src:r.src}; });
+
+  renderEditPhotos();
+  renderEditRooms();
+  openModal('editModal');
+}
+
+function renderEditPhotos() {
+  const grid = document.getElementById('ePhotoGrid');
+  grid.innerHTML = editPhotos.map(function(ph, i){
+    return '<div class="photo-item'+(ph.isMain?' main-photo':'')+'" onclick="delEditPhoto('+i+')" title="Click to delete">' +
+           '<img src="'+ph.src+'" alt="">' +
+           '<div class="ph-del">✕</div>' +
+           '</div>';
+  }).join('') +
+  '<button class="add-photo-btn" onclick="document.getElementById(\'ePhotoInput\').click()" title="Add photo">+</button>';
+}
+
+function addEditPhotos(e) {
+  const files = Array.from(e.target.files);
+  files.forEach(function(f){
+    const url = URL.createObjectURL(f);
+    editPhotos.push({src:url, isMain: editPhotos.length === 0});
+  });
+  e.target.value = '';
+  renderEditPhotos();
+}
+
+function delEditPhoto(i) {
+  if (editPhotos.length <= 1) { toast('⚠️ Need at least one photo'); return; }
+  const wasMain = editPhotos[i].isMain;
+  editPhotos.splice(i, 1);
+  if (wasMain && editPhotos.length) editPhotos[0].isMain = true;
+  renderEditPhotos();
+}
+
+function renderEditRooms() {
+  const list = document.getElementById('eRoomList');
+  if (!editRooms.length) { list.innerHTML = '<p style="font-size:.8rem;color:var(--grey);padding:8px 0">No 360° rooms yet. Add one below.</p>'; return; }
+  list.innerHTML = editRooms.map(function(r, i){
+    return '<div class="edit-room-item">' +
+      '<div class="edit-room-thumb"><img src="'+r.src+'" alt=""></div>' +
+      '<span style="font-size:1.1rem">'+r.icon+'</span>' +
+      '<input class="edit-room-name" value="'+r.name+'" onchange="editRooms['+i+'].name=this.value" placeholder="Room name">' +
+      '<button class="edit-room-del" onclick="delEditRoom('+i+')" title="Remove">✕</button>' +
+      '</div>';
+  }).join('');
+}
+
+function addEditRoom(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  const name = file.name.replace(/\.[^.]+$/,'').replace(/[-_]/g,' ');
+  const ICONS = {'exterior':'🌿','living':'🛋','bedroom':'🛏','kitchen':'🍳','bath':'🚿','dining':'🪑','garden':'🌳','garage':'🚗','balcony':'🌅','pool':'🏊'};
+  const nl = name.toLowerCase();
+  let icon = '🏠';
+  Object.keys(ICONS).forEach(function(k){ if(nl.indexOf(k)>=0) icon=ICONS[k]; });
+  editRooms.push({name:name||'Room '+(editRooms.length+1), icon:icon, src:url});
+  e.target.value = '';
+  renderEditRooms();
+}
+
+function delEditRoom(i) {
+  editRooms.splice(i,1);
+  renderEditRooms();
+}
+
+function saveEdit() {
+  if (!editingId) return;
+  const idx = props.findIndex(function(p){ return p.id === editingId; });
+  if (idx < 0) return;
+  const p = props[idx];
+  const title = document.getElementById('eTitle').value.trim() || p.title.en;
+  p.title = {en:title, ku:title, ar:title};
+  p.type   = document.getElementById('eType').value;
+  p.status = document.getElementById('eStatus').value;
+  p.price  = parseFloat(document.getElementById('ePrice').value) || p.price;
+  p.pU     = p.status === 'rent' ? '/mo' : '';
+  p.loc    = document.getElementById('eLoc').value.trim() || p.loc;
+  p.beds   = parseInt(document.getElementById('eBeds').value) || 0;
+  p.baths  = parseInt(document.getElementById('eBaths').value) || 0;
+  p.area   = parseInt(document.getElementById('eArea').value) || 0;
+  p.agent  = document.getElementById('ePhone').value.trim() || p.agent;
+  const descVal = document.getElementById('eDesc').value.trim();
+  p.desc = {en:descVal, ku:descVal, ar:descVal};
+  // photos
+  if (editPhotos.length) {
+    p.photos = editPhotos.map(function(ph){ return ph.src; });
+    p.img    = editPhotos.find(function(ph){ return ph.isMain; })?.src || editPhotos[0].src;
+  }
+  // rooms
+  p.rooms = editRooms.map(function(r){ return {name:r.name, icon:r.icon, src:r.src}; });
+  closeModal('editModal');
+  renderProps();
+  toast('✅ Property updated');
+}
+
+// ══ HELPERS ══
+function toast(msg){
+  const t=document.getElementById('toastEl');
+  t.textContent=msg;t.classList.add('show');
+  clearTimeout(window._tt);window._tt=setTimeout(()=>t.classList.remove('show'),3200);
+}
+window.addEventListener('scroll',()=>document.getElementById('nb').classList.toggle('sc',scrollY>60));
+function toggleMob(){document.getElementById('nl').classList.toggle('mob');}
+
+// ══ INIT ══
+applyT(); renderProps();
+setTimeout(()=>{
+  let c=0,t=props.length;
+  const el=document.getElementById('stL');
+  const iv=setInterval(()=>{c++;el.textContent=c;if(c>=t)clearInterval(iv);},70);
+},400);
+</script>
+</body>
+</html>
